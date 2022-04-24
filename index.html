@@ -16,20 +16,20 @@
 <body>
   <div id="head-box">
     <header>
-      <h1>Create and share your event/h1>
+      <h1>Create and share your event</h1>
       <p>The first step is fill this subscription form</p>
     </header>
   </div>
   
 
-  <form>
+  <form id="my-form">
     <fieldset>
         <div class="fieldset-wrapper">
           <legend>Event info</legend>
     
           <div class="input-wrapper">
             <label for="event-title">Event title <span>(minimum 8 characters)</span></label>
-            <input type="text" id="event-title">
+            <input type="text" id="event-title" required minlength="8">
           </div>
     
           <div class="input-wrapper">
@@ -39,12 +39,12 @@
     
           <div class="input-wrapper">
             <label for="whatsapp">Whatsapp for contact<span>(only numbers)</span></label>
-            <input type="number" id="whatsapp">
+            <input type="number" id="whatsapp" required>
           </div>
 
           <div class="input-wrapper">
             <label for="event-text">Extra info</label>
-            <textarea id="event-text"></textarea>
+            <textarea id="event-text" maxlength="550"></textarea>
           </div>
 
           <div class="input-wrapper">
@@ -57,7 +57,57 @@
           </div>
 
         </div>
-      </fieldset>
+    </fieldset>
+
+    <fieldset>
+      <div class="fieldset-wrapper">
+        <legend>Privacy</legend>
+
+        <div class="input-wrapper">
+          <label for="adm-email">Administrator email<span>(Digit a valid email)</span></label>
+          <input type="email" id="adm-email">
+        </div>
+  
+        <div class="input-wrapper">
+          <label for="participant-pass">Acess password for participants<span>(minimum 8 characters)</span></label>
+          <input type="password" id="participant-pass" required>
+        </div>
+
+        <div class="checkbox-wrapper">
+          <input type="checkbox" id="checkbox">
+          <label for="checkbox">Private event</label>
+        </div>
+
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <div class="fieldset-wrapper">
+        <legend>Date and time</legend>
+
+        <div class="data-columns">
+          <div class="input-wrapper">
+            <label for="event-date">Date</label>
+            <input type="date" id="event-date">
+          </div>
+    
+          <div class="input-wrapper">
+            <label for="event-time-from">From</label>
+            <input type="time" id="event-time-from">
+          </div>
+  
+          <div class="input-wrapper">
+            <label for="event-time-to">To</label>
+            <input type="time" id="event-time-to">
+          </div>
+        </div>
+
+      </div>
+    </fieldset>
+
   </form>
+  <footer>
+    <input type="submit" class="button" value="Save event" form="my-form">
+  </footer>
 </body>
 </html>
