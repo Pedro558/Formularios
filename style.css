@@ -1,3 +1,4 @@
+/*GLOBAL*/
 *{
   box-sizing: border-box;
   margin: 0;
@@ -17,7 +18,6 @@ body::before{
   width: 100%;
   height: 368px;
   background: black;
-
   position: absolute;
   top: 0;
   left: 0;
@@ -97,7 +97,7 @@ fieldset>legend{
 .input-wrapper select{
   appearance: none;
   -webkit-appearance: none;
-  background-image: url(seta.svg);
+  background-image: url(images/seta.svg);
   background-repeat: no-repeat;
   background-position: right 24px top 50%;
 }
